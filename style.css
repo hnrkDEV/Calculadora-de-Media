@@ -95,7 +95,7 @@ button:hover {
     margin-left: 30px;
     margin-top: 30px;
 }
-hr {
+.hr1 {
     margin-top: 20px;
     background-color: rgba(255, 255, 255, 0.6);
     height: 2px;
@@ -107,4 +107,7 @@ th ,td{
     padding: 10px;
     color: white;
     text-transform: uppercase;
+}
+table th {
+    border-bottom: 2px solid rgb(17, 17, 17);
 }
