@@ -1,33 +1,35 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Playwrite+DE+Grund&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton+SC&family=Edu+VIC+WA+NT+Beginner:wght@700&family=Playwrite+DE+Grund&display=swap');
 * {
 margin: 0;
 padding: 0;
-
 }
 body {
     width: 100vw;
     height: 100vh;
     display: flex;
-    background-image: url(./img/space-background-realistic-starry-night-cosmos-shining-stars-milky-way-stardust-color-galaxy.jpg);
+    background-color: cadetblue;
+ /*    background-image: url(./img/education-day-arrangement-table-with-copy-space.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
     justify-content: center;
     align-items: center;
 }
 .container {
-    background-color: blueviolet;
-    opacity: 0.5;
-    filter: drop-shadow(0px 0px 10px);
+    background-color: rgba(0, 77, 13, 0.3);
+    backdrop-filter: blur(14.5px);
+    box-shadow: rgb(221, 233, 221) -2px 2px 10px;
     height: 600px;
     width: 600px;
     border-radius: 20px;
 }
 .maincontent {
-    display: inline-block;
     position: absolute;
     border-radius: 20px;
     height: 600px;
     width: 600px;
+}
+.divPrincipal {
+    display: flex;
 }
 .studyBook {
     display: inline-block;
@@ -41,12 +43,68 @@ h1{
     color: white;
     text-transform: uppercase;
     font-size: 30px;
-    margin-left: 0px;
-    font-family: "Edu VIC WA NT Beginner", cursive;
-    font-weight: bolder;
+    margin-left: 10px;
+    margin-top: 55px;
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+    text-decoration: underline;
 }
 input {
+    background: none;
     display: inline-block;
-    width: 100px;
-    height: 50px;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid white;
+}
+input::placeholder {
+    color: white;
+    text-transform: uppercase;
+}
+
+#activityName {
+    margin-left: 35px;
+    height: 25px;
+    width: 250px;
+}
+#nota {
+    height: 25px;
+    width: 50px;
+    margin-left: 5px;
+}
+button {
+    color: white;
+    margin-left: 10px;
+    background-color: rgb(68, 187, 68);
+    border: none;
+    padding: 5px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+button:hover {
+    cursor: pointer;
+}
+.toy {
+    margin-left: 50px;
+    width: 340px;
+}
+.tableDiv {
+    margin-left: 30px;
+    margin-top: 30px;
+}
+hr {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 2px;
+    border: none;
+}
+th ,td{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
 }

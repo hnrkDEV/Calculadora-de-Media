@@ -7,17 +7,54 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+   
     <div class="container">
-    </div>
     <div class="maincontent">
-        <div>
+        <div class="divPrincipal">
         <img src="./img/calculate_24dp_E8EAED_FILL0_wght400_GRAD0_opsz24.png" alt="" class="studyBook">
         <h1 class="titleh1">calculadora de médias</h1>
         </div>
-        <input type="text">
-        <input type="text">
-    </div>
+        <div>
+            <form action="" id="form">
+        <input type="text" id="activityName" placeholder="Nome da Atividade" required>
+        <input type="number" id="nota" placeholder="Nota" required min="0" max="10">
+        <button type="submit">adicionar +</button>
+            </form>
+        </div>
+        <hr>
+        <div class="tableDiv">
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Nome da atividade
+                    </th>
+                    <th > Nota da atividade</th>
+                    <th>Aprovado?</th>
+                </tr>
+            </thead>
 
+        <tbody>
+            <tr>
+                <td id="atividadeNome"> Atividade 1 </td>
+                <td id="atividadeNota"> 7</td>
+                <td id="resultado">sim ou não?</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td id="mediaFinal">Média final</td>
+                <td id="notaFinal">7</td>
+                <td id="resultadoFinal">aprovado!</td>
+            </tr>
+        </tfoot>
+    </table>
+    </div>
+    </div>
+</div>
+<div>
+    <img src="./img/undraw_quiz_re_aol4.svg" alt="" class="toy">
+</div>
     <script src="./main.js"></script>
 </body>
 </html>
