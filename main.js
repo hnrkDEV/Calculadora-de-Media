@@ -8,6 +8,12 @@ const form = document.getElementById("form")
         console.log(nota)
         document.getElementById('nota').value = ""
         document.getElementById('activityName').value = ""
+        document.getElementById('tablealuno').innerHTML += `<tr>
+        <td>${atividadeNome}</td>
+        <td> ${nota}</td>
+        </tr>`
+        const table = document.querySelector(".tableDiv")
+        
     
     })
 
