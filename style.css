@@ -7,7 +7,7 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
-    background-color: cadetblue;
+    background-color: rgb(135, 197, 173);
  /*    background-image: url(./img/education-day-arrangement-table-with-copy-space.jpg);
     background-repeat: no-repeat;
     background-size: cover; */
@@ -17,7 +17,7 @@ body {
 .container {
     background-color: rgba(0, 77, 13, 0.3);
     backdrop-filter: blur(14.5px);
-    box-shadow: rgb(221, 233, 221) -2px 2px 10px;
+    box-shadow: rgb(6, 7, 6) -2px 2px 10px;
     height: 600px;
     width: 600px;
     border-radius: 20px;
