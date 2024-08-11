@@ -3,16 +3,15 @@ const form = document.getElementById("form")
 let linhas = '';
 const atividades = []
 const notas = []
-let i = 0
-
-
+let divisao
 
  form.addEventListener('submit', function(e){
         e.preventDefault();
 
         adicionaLinha();
         atualizaTabela();
-/*      atualizaMediaFinal(); */
+        atualizaMediaFinal();
+        adicionaMedia();
     });
     
     function adicionaLinha(){
@@ -26,7 +25,7 @@ let i = 0
         let linha = "<tr>";
         linha += `<td>${inputNomeAtividade.value}</td>`;
         linha += `<td>${inputNotaAtividade.value}</td>`;
-        linha += `<td>${inputNotaAtividade.value >= 7 ? "aprovado!" : "reprovado."}</td>`;
+        linha += `<td>${inputNotaAtividade.value >= 7 ? "aprovado" : "reprovado"}</td>`;
         linha += "</tr>";
 
         linhas += linha;
@@ -40,7 +39,31 @@ let i = 0
         corpoTabela.innerHTML = linhas;
     }
 
+    function atualizaMediaFinal(){
+        let somaDasNotas = 0
 
+        for(let i=0 ; i<notas.length; i++) {
+            somaDasNotas += notas[i]
+            divisao = somaDasNotas / notas.length
 
- 
-
+    }
+    console.log(somaDasNotas)
+    console.log(divisao)
+}
+    function adicionaMedia(){
+        trFoot = document.getElementById("trFoot")
+        if(divisao >= 7 && notas.length>1){
+            trFoot.innerHTML = "<td>Média Final</td>"
+            trFoot.innerHTML += `<td>${divisao}</td>`
+            trFoot.innerHTML += '<td id="resultadoAprovado">Aprovado! 😁</td>'
+            document.getElementById("resultadoAprovado").style.backgroundColor = "green"
+            document.getElementById("resultadoAprovado").style.borderRadius = "5px"
+        }
+        else if(divisao <7 && notas.length>1){
+            trFoot.innerHTML = "<td>Média Final</td>"
+            trFoot.innerHTML += `<td>${parseInt(divisao)}</td>`
+            trFoot.innerHTML += '<td id="resultadoReprovado">Reprovado... 😢 </td>'
+            document.getElementById("resultadoReprovado").style.backgroundColor = "red"
+            document.getElementById("resultadoReprovado").style.borderRadius = "5px"
+        }
+    }
