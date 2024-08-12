@@ -19,6 +19,10 @@ let divisao
         const inputNomeAtividade = document.getElementById("activityName");
         const inputNotaAtividade = document.getElementById("nota");
          
+            if(atividades.includes(inputNomeAtividade.value)){
+                alert(`a Atividade ${inputNomeAtividade.value} já foi inserida`)
+            }
+            else {
             atividades.push(inputNomeAtividade.value);
             notas.push(parseFloat(inputNotaAtividade.value));
 
@@ -32,6 +36,7 @@ let divisao
 
         inputNomeAtividade.value = ""
         inputNotaAtividade.value = ""
+     }
     }
 
     function atualizaTabela(){
