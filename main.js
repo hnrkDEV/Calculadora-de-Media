@@ -12,19 +12,19 @@ let divisao
         atualizaTabela();
         atualizaMediaFinal();
         adicionaMedia();
-    });
+    }); //função desfaz o efeito de submit de atualização da página
     
-    function adicionaLinha(){
+    function adicionaLinha(){  //essa função vai adicionando uma linha à tabela
  
         const inputNomeAtividade = document.getElementById("activityName");
         const inputNotaAtividade = document.getElementById("nota");
          
-            if(atividades.includes(inputNomeAtividade.value)){
+            if(atividades.includes(inputNomeAtividade.value)){ //Condicional para caso a atividade esteja duplicada
                 alert(`a Atividade ${inputNomeAtividade.value} já foi inserida`)
             }
             else {
             atividades.push(inputNomeAtividade.value);
-            notas.push(parseFloat(inputNotaAtividade.value));
+            notas.push(parseFloat(inputNotaAtividade.value)); 
 
         let linha = "<tr>";
         linha += `<td>${inputNomeAtividade.value}</td>`;
@@ -39,9 +39,9 @@ let divisao
      }
     }
 
-    function atualizaTabela(){
+    function atualizaTabela(){ //essa função ela adiciona a tabela inteira no body da tabela
         const corpoTabela = document.querySelector("tbody");
-        corpoTabela.innerHTML = linhas;
+        corpoTabela.innerHTML = linhas; 
     }
 
     function atualizaMediaFinal(){
@@ -49,18 +49,18 @@ let divisao
 
         for(let i=0 ; i<notas.length; i++) {
             somaDasNotas += notas[i]
-            divisao = somaDasNotas / notas.length
+            divisao = somaDasNotas / notas.length //cálculo para tirar a média das atividades
 
     }
 }
-    function adicionaMedia(){
+    function adicionaMedia(){ //essa função vai adicionar todo o footer com o resultado da média junto com condicionais para dizer se foi aprovado ou reprovado
         trFoot = document.getElementById("trFoot")
         if(divisao >= 7 && notas.length>1){
             trFoot.innerHTML = "<td>Média Final</td>"
             trFoot.innerHTML += `<td>${divisao}</td>`
             trFoot.innerHTML += '<td id="resultadoAprovado">Aprovado! 😁</td>'
             document.getElementById("resultadoAprovado").style.backgroundColor = "green"
-            document.getElementById("resultadoAprovado").style.borderRadius = "5px"
+            document.getElementById("resultadoAprovado").style.borderRadius = "5px" //essas duas ultimas linhas são para mudar o style no css do resultado
         }
         else if(divisao <7 && notas.length>1){
             trFoot.innerHTML = "<td>Média Final</td>"
