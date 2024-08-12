@@ -64,8 +64,7 @@ let divisao
         }
         else if(divisao <7 && notas.length>1){
             trFoot.innerHTML = "<td>Média Final</td>"
-            divisao = parseInt(divisao)
-            trFoot.innerHTML += `<td>${divisao}</td>`
+            trFoot.innerHTML += `<td>${divisao.toFixed(2)}</td>`
             trFoot.innerHTML += '<td id="resultadoReprovado">Reprovado... 😢 </td>'
             document.getElementById("resultadoReprovado").style.backgroundColor = "red"
             document.getElementById("resultadoReprovado").style.borderRadius = "5px"
