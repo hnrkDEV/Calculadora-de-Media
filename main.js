@@ -47,8 +47,6 @@ let divisao
             divisao = somaDasNotas / notas.length
 
     }
-    console.log(somaDasNotas)
-    console.log(divisao)
 }
     function adicionaMedia(){
         trFoot = document.getElementById("trFoot")
@@ -61,7 +59,8 @@ let divisao
         }
         else if(divisao <7 && notas.length>1){
             trFoot.innerHTML = "<td>Média Final</td>"
-            trFoot.innerHTML += `<td>${parseInt(divisao)}</td>`
+            divisao = parseInt(divisao)
+            trFoot.innerHTML += `<td>${divisao}</td>`
             trFoot.innerHTML += '<td id="resultadoReprovado">Reprovado... 😢 </td>'
             document.getElementById("resultadoReprovado").style.backgroundColor = "red"
             document.getElementById("resultadoReprovado").style.borderRadius = "5px"
